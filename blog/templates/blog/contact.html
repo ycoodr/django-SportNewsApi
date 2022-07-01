@@ -20,28 +20,22 @@
     </div>
     <div class="container row mt-5 text-center" style="margin-left: auto; margin-right: auto;">
 
-    {% for article in articles %}
-    <div class="col-lg-6 col-sm-12 mb-3">
-        <div class="card" style="width: 28rem; margin: 0 auto;">
-        <img src="{{ article.urlToImage }}" class="card-img-top" alt="..."/>
+    
+    <div class="col-lg-10 col-sm-12 mb-3">
+        <div class="card" style="width: 58rem; margin: 0 auto;">
+       
         <div class="card-body">
-            <h5 class="card-title">{{ article.title }}</h5>
-            <p class="card-content">{{ article.description }}</p>
+            <h5 class="card-title">Contact us</h5>
+            <p class="card-content">You can contact us via info@example.com</p>
 
-            <form action="{% url 'singleArticle' %}" method="POST">
-                {% csrf_token %}
-                <input type="text" style="display: none;" name="image" value="{{ article.urlToImage }}" />
-                <input type="text" style="display: none;" name="title" value="{{ article.title }}"/>
-                <input type="text" style="display: none;" name="content" value="{{ article.content }}"/>
-                <input type="submit" class="btn btn-primary" value="Read more" />
-            </form>
+         
 
         </div>
         </div>
     </div>
     
 
-    {% endfor %}
+  
 </div>
 
     <!-- JavaScript Bundle with Popper -->
